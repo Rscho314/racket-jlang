@@ -19,7 +19,7 @@
 
 @section{Ranked Values}
 
-@subsection{Definitions}
+@subsection{Definitions3}
 
 @defproc[(atom? [v any/c]) boolean?]{
   Equivalent to @racket[(zero? (rank v))].

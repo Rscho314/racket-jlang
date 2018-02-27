@@ -7,7 +7,7 @@
 
 @section{Interaction}
 
-@subsection{Definitions}
+@subsection{Definitions4}
 
 @defmodule[j/number]{
   Support for parsing J-style numeric constants.
