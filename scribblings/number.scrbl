@@ -5,6 +5,10 @@
 
 @title{Numbers}
 
+@section{Interaction}
+
+@subsection{Definitions}
+
 @defmodule[j/number]{
   Support for parsing J-style numeric constants.
 }

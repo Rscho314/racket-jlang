@@ -9,6 +9,10 @@
 @(define j-eval (make-base-eval))
 @examples[#:hidden #:eval j-eval (require j/main)]
 
+@section{Foundation}
+
+@subsection{Definitions}
+
 @defmodule[j]{
 }
 

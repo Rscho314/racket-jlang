@@ -13,11 +13,13 @@
 @(define rank-eval (make-base-eval))
 @examples[#:hidden #:eval rank-eval (require math/array racket/sequence j/rank)]
 
+@section{Ranked Values}
+
+@subsection{Definitions}
+
 @defmodule[j/rank]{
   Support for J-style ranked apply.
 }
-
-@section{Ranked Values}
 
 @defproc[(atom? [v any/c]) boolean?]{
   Equivalent to @racket[(zero? (rank v))].
@@ -82,6 +84,8 @@
 }
 
 @section{Items}
+
+@subsection{Definitions1}
 
 @defproc[(item-count [v any/c]) exact-nonnegative-integer?]{
   Returns the number of items in @racket[v].
@@ -155,6 +159,8 @@
 
 @section{Ranked Procedures}
 
+@subsection{Definitions2}
+
 A ranked procedure implicitly iterates over its arguments according to its rank.
 
 @examples[#:eval rank-eval
@@ -226,21 +232,21 @@ A ranked procedure implicitly iterates over its arguments according to its rank.
   Returns the rank of @racket[proc] when applied with @racket[arity] arguments.
 }
 
-@defform[(lambda/rank (arg ...) body ...+)
+@defform[#:id lambda/rank (lambda/rank (arg ...) body ...+)
          #:grammar
          [(arg id [id rank])]]{
   Creates a ranked procedure. If @racket[rank] is not specified, it defaults
   to @racket[#f] (infinite).
 }
 
-@defform[(case-lambda/rank [(arg ...) body ...+] ...)
+@defform[#:id case-lambda/rank(case-lambda/rank [(arg ...) body ...+] ...)
          #:grammar
          [(arg id [id rank])]]{
   Creates a ranked procedure with multiple arities, similar to @racket[case-lambda].
   If @racket[rank] is not specified, it defaults to @racket[#f] (infinite).
 }
 
-@defform[(define/rank (id arg ...) body ...+)]{
+@defform[#:id define/rank(define/rank (id arg ...) body ...+)]{
   Shorthand for defining ranked procedures.
 }
 
