@@ -19,7 +19,7 @@
 
 @section{Ranked Values}
 
-@subsection{Definitions3}
+@subsection[#:tag "values-procedures"]{Procedures}
 
 @defproc[(atom? [v any/c]) boolean?]{
   Equivalent to @racket[(zero? (rank v))].
@@ -85,7 +85,7 @@
 
 @section{Items}
 
-@subsection{Definitions1}
+@subsection[#:tag "items-procedures"]{Procedures}
 
 @defproc[(item-count [v any/c]) exact-nonnegative-integer?]{
   Returns the number of items in @racket[v].

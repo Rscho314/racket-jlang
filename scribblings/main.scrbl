@@ -4,14 +4,14 @@
           (for-label racket/base
                      j/main))
 
-@title{Main}
+@title{Getting Started}
 
 @(define j-eval (make-base-eval))
 @examples[#:hidden #:eval j-eval (require j/main)]
 
-@section{Foundation}
+@section{Calling J}
 
-@subsection{Definitions5}
+@subsection{Calling J from Racket}
 
 @defmodule[j]{
 }

@@ -5,13 +5,13 @@
 
 @title{Numbers}
 
-@section{Interaction}
-
-@subsection{Definitions4}
-
 @defmodule[j/number]{
   Support for parsing J-style numeric constants.
 }
+
+@section[#:tag "numbers-procedures"]{Procedures}
+
+@subsection{Conversion}
 
 @defproc[(string->number/j [str string?]) (or/c number? #f)]{
   Parses @racket[str] according to the J grammar. Returns the number or @racket[#f]
