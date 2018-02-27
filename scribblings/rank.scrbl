@@ -13,13 +13,13 @@
 @(define rank-eval (make-base-eval))
 @examples[#:hidden #:eval rank-eval (require math/array racket/sequence j/rank)]
 
-@section{Ranked Values}
-
-@subsection{Definitions}
-
 @defmodule[j/rank]{
   Support for J-style ranked apply.
 }
+
+@section{Ranked Values}
+
+@subsection{Definitions}
 
 @defproc[(atom? [v any/c]) boolean?]{
   Equivalent to @racket[(zero? (rank v))].
